@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1lXxWQFtEaerc9Vy5d7sKx_9hHRa9o8lo
 """
 
-tulisan=["aku dan teman-teman suka jalan"]
+tulisan="aku dan teman-teman suka jalan"
 
 stp=["dan"]
 
@@ -22,9 +22,10 @@ def flatten(l):
 
     Example =[[1,2,3,4,5]] - > [1,2,3,4,5]
     """
-    return [item for sublist in l for item in sublist]
+    return " ".join([item for sublist in l for item in sublist])
 
 filter_words=[]
+tulisan=tulisan.split()
 tulisan=[word for word in tulisan if word not  in stp]
 filter_words.append(tulisan)
 
@@ -32,4 +33,4 @@ filter_words
 
 flat_word=flatten(filter_words)
 
-" ".join(flat_word)
+flat_word
